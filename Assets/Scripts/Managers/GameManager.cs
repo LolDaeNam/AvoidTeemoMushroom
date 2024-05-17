@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,8 +7,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject mushroom;
     private float intervalTime = 1f;
     private bool isPlaying = false;
-    
-    public int totalScore = 0;
 
     public void Awake()
     {
@@ -41,8 +37,8 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        isPlaying = false;
-        SceneManager.LoadScene(2);
+        isPlaying=false;
+        Time.timeScale = 0f;
     }
 
     public void GamePause()
