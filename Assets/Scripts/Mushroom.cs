@@ -43,5 +43,10 @@ public class Mushroom : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        else if (collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(this.gameObject);
+            GameManager.Instance.GameOver();
+        }
     }
 }

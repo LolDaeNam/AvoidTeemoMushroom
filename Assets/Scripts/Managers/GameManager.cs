@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -37,7 +38,8 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        isPlaying=false;
+        SceneManager.LoadScene("EndScene");
+        isPlaying =false;
     }
 
     public void GamePause()
