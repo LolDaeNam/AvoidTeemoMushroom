@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
     {
         isPlaying = true;
         Time.timeScale = 1f;
+        totalScore = 0;
     }
 
     public void GameOver()
