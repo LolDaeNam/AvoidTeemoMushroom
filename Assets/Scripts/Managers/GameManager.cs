@@ -9,13 +9,18 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject mushroom;
     private float intervalTime = 1f;
     private bool isPlaying = false;
-
+    
     public int totalScore = 0;
 
     public void Awake()
     {
         Instance = this;
         DontDestroyOnLoad(this);
+    }
+
+    private void Update()
+    {
+        totalScoreTxt.text = totalScore.ToString();
     }
 
     public void FixedUpdate()
