@@ -1,3 +1,4 @@
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -14,8 +15,11 @@ public class GameManager : MonoBehaviour
 
     public void Awake()
     {
-        Instance = this;
-        DontDestroyOnLoad(this);
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
     }
 
     public void FixedUpdate()
@@ -37,6 +41,7 @@ public class GameManager : MonoBehaviour
     public void GameStart()
     {
         isPlaying = true;
+        Time.timeScale = 1f;
     }
 
     public void GameOver()
@@ -47,7 +52,7 @@ public class GameManager : MonoBehaviour
 
     public void GamePause()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 0f;
     }
 
     public void MakeMushroom()
