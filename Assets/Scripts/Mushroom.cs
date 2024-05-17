@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Mushroom : MonoBehaviour
 {
@@ -53,6 +54,7 @@ public class Mushroom : MonoBehaviour
         {
             Destroy(this.gameObject);
             GameManager.Instance.GameOver();
+            SceneManager.LoadScene(2);
         }
     }
 }

@@ -863,7 +863,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mushroom: {fileID: 1421598194205631842, guid: e32496de469d04641b9f504e6f236b7c, type: 3}
-  totalScoreTxt: {fileID: 2556819177447399204, guid: 29681fa01dbe2a94fb342606e739a090, type: 3}
   totalScore: 0
 --- !u!4 &1575090963
 Transform:
@@ -1244,8 +1243,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1575090962}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1721145145}
+        m_TargetAssemblyTypeName: ButtonAction, Assembly-CSharp
         m_MethodName: GameStart
         m_Mode: 1
         m_Arguments:

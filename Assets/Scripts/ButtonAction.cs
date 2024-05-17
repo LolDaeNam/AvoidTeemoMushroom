@@ -9,6 +9,21 @@ public class ButtonAction : MonoBehaviour
         SceneManager.LoadScene(sceneNum);
     }
 
+    public void GameStart()
+    {
+        GameManager.Instance.GameStart();
+    }
+
+    public void GameOver()
+    {
+        GameManager.Instance.GameOver();
+    }
+
+    public void GamePause()
+    {
+        GameManager.Instance.GamePause();
+    }
+
     // 판넬 활성화 (panel = 활성화할 판넬 오브젝트)
     public void OpenPanel(GameObject panel)
     {
