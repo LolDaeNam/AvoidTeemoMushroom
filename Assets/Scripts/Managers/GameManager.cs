@@ -18,11 +18,6 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    private void Update()
-    {
-        totalScoreTxt.text = totalScore.ToString();
-    }
-
     public void FixedUpdate()
     {
         if (isPlaying)
