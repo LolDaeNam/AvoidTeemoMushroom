@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,10 +9,19 @@ public class GameManager : MonoBehaviour
     private float intervalTime = 1f;
     private bool isPlaying = false;
 
+    [SerializeField] private Text totalScoreTxt;
+
+    public int totalScore = 0;
+
     public void Awake()
     {
         Instance = this;
         DontDestroyOnLoad(this);
+    }
+
+    private void Update()
+    {
+        totalScoreTxt.text = totalScore.ToString();
     }
 
     public void FixedUpdate()
@@ -37,7 +47,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        isPlaying=false;
+        isPlaying = false;
     }
 
     public void GamePause()

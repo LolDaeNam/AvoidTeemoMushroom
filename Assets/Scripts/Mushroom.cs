@@ -5,6 +5,8 @@ using UnityEngine;
 public class Mushroom : MonoBehaviour
 {
     float size = 1.0f;
+
+    int score = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,14 +20,17 @@ public class Mushroom : MonoBehaviour
         if (type == 1)
         {
             size = 0.8f;
+            score = 10;
         }
         else if (type == 2)
         {
             size = 1.0f;
+            score = 20;
         }
         else if (type == 3)
         {
             size = 1.2f;
+            score = 30;
         }
 
         transform.localScale = new Vector3(size, size, 0);
@@ -42,6 +47,7 @@ public class Mushroom : MonoBehaviour
         if(collision.gameObject.CompareTag("Ground"))
         {
             Destroy(this.gameObject);
+            GameManager.Instance.totalScore += score;
         }
     }
 }
