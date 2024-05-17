@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private SpriteRenderer characterRenderer;
 
-    // 이동 - 이동 방향
     Vector2 movementDirection = Vector2.zero;
 
     public float speed = 5f;
@@ -32,10 +31,8 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    // 물리적인 이동
     private void FixedUpdate()
     {
-        // 실제 이동 함수
         ApplyMovement(movementDirection);
     }
 
