@@ -13,6 +13,14 @@ public class ButtonAction : MonoBehaviour
     public void OpenPanel(GameObject panel)
     {
         panel.SetActive(true);
+        Time.timeScale = 0f; // 게임 일시 중/
+    }
+
+    // 판넬 비활성화 (panel = 비활성화활 판넬 오브젝트
+    public void ClosePanel(GameObject panel)
+    {
+        panel.SetActive(false);
+        Time.timeScale = 1f; //게임 재개
     }
 
     // 게임 종료
