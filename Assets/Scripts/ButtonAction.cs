@@ -9,6 +9,12 @@ public class ButtonAction : MonoBehaviour
         SceneManager.LoadScene(sceneNum);
     }
 
+    // 게임 시작
+    public void GameStart()
+    {
+        GameManager.Instance.GameStart();
+    }
+
     // 판넬 활성화 (panel = 활성화할 판넬 오브젝트)
     public void OpenPanel(GameObject panel)
     {
@@ -16,7 +22,7 @@ public class ButtonAction : MonoBehaviour
         Time.timeScale = 0f; // 게임 일시 중/
     }
 
-    // 판넬 비활성화 (panel = 비활성화활 판넬 오브젝트
+    // 판넬 비활성화 (panel = 비활성화활 판넬 오브젝트)
     public void ClosePanel(GameObject panel)
     {
         panel.SetActive(false);
