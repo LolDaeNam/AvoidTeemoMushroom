@@ -556,6 +556,8 @@ GameObject:
   - component: {fileID: 2760358192452297184}
   - component: {fileID: 86791678166157394}
   - component: {fileID: 5792679085400124720}
+  - component: {fileID: 4914324416439836420}
+  - component: {fileID: 8919597579071854176}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -724,3 +726,36 @@ MonoBehaviour:
   hpSlider: {fileID: 7920647824213931216}
   hpText: {fileID: 7069103108056730201}
   isDead: 0
+--- !u!95 &4914324416439836420
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9130610944362545636}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 708dfa1f0cbec0c4f813464e3231e349, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8919597579071854176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9130610944362545636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ee82654bb99524e89b0688c45f4c04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

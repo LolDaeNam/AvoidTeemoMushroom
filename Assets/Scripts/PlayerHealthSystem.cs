@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerHealthSystem : MonoBehaviour
 {
+    PlayerAnimationContorller playerAnimation;
+
     public int maxHp = 100;
     private int currentHp;
 
@@ -15,6 +17,7 @@ public class PlayerHealthSystem : MonoBehaviour
 
     private void Start()
     {
+        playerAnimation = GetComponent<PlayerAnimationContorller>();
         currentHp = maxHp;
     }
 
@@ -30,6 +33,8 @@ public class PlayerHealthSystem : MonoBehaviour
         if (currentHp < 0) currentHp = 0;
 
         UpdateHpUI();
+        playerAnimation.OnAnimHit();
+        playerAnimation.Invoke("OutAnimHit", 0.1f);
 
         if (currentHp == 0)
         {
