@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Mushroom : MonoBehaviour
 {
+    private PlayerHealthSystem healthSystem;
+
     float size = 1.0f;
 
-    int score = 0;
+    public int score;
+    public int damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,16 +25,19 @@ public class Mushroom : MonoBehaviour
         {
             size = 0.8f;
             score = 10;
+            damage = 20;
         }
         else if (type == 2)
         {
             size = 1.0f;
             score = 20;
+            damage = 30;
         }
         else if (type == 3)
         {
             size = 1.2f;
             score = 30;
+            damage = 50;
         }
 
         transform.localScale = new Vector3(size, size, 0);
@@ -53,8 +59,10 @@ public class Mushroom : MonoBehaviour
         else if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(this.gameObject);
-            GameManager.Instance.GameOver();
-            SceneManager.LoadScene(2);
+
+            healthSystem.TakeDamage(damage);
+
+            if (healthSystem.isDead == true) GameManager.Instance.GameOver();
         }
     }
 }

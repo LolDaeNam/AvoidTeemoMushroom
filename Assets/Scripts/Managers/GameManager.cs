@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         isPlaying = false;
+        SceneManager.LoadScene(2);
     }
 
     public void GamePause()
