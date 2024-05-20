@@ -38,6 +38,5 @@ public class ItemManager : MonoBehaviour
         // 무적 상태 5초 유지 후 원상복귀
         yield return new WaitForSeconds(5f);
         player.tag = "Player";
-        player.GetComponentInChildren<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
     }
 }
