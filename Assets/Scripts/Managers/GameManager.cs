@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     [SerializeField] private GameObject mushroom;
-    [SerializeField] private Text bestScoreTxt; // BestScore를 표시할 UI Text 요소
+ 
 
     private float intervalTime = 1f;
     private bool isPlaying = false;
@@ -32,8 +32,7 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(this);
         }
         bestScore = PlayerPrefs.GetInt("BestScore", 0);
-        if(bestScoreTxt != null)
-        bestScoreTxt.text = "Best Score:" + bestScore.ToString();
+        
     }
 
     public void FixedUpdate()
@@ -79,8 +78,6 @@ public class GameManager : MonoBehaviour
         if(newScore > bestScore)
         {
             bestScore = newScore;
-             if(bestScoreTxt != null)
-            bestScoreTxt.text = "Best Score:" + bestScore.ToString();
             PlayerPrefs.SetInt("BestScore", bestScore);
            
         }
