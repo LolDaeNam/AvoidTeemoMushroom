@@ -6,8 +6,12 @@ using UnityEngine.SceneManagement;
 public class Mushroom : MonoBehaviour
 {
     float size = 1.0f;
-
     int score = 0;
+
+    // 크기와 점수를 배열로 저장
+    float[] sizes = { 2.0f, 1.0f, 5.0f };
+    int[] scores = { 10, 20, 30 };
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,22 +21,12 @@ public class Mushroom : MonoBehaviour
         transform.position = new Vector3(x, y, 0);
 
         int type = Random.Range(1, 4);
+        // 배열 인덱스는 0부터 시작하므로 type 값에서 1을 뺀다.
+        int index = type - 1;
 
-        if (type == 1)
-        {
-            size = 0.8f;
-            score = 10;
-        }
-        else if (type == 2)
-        {
-            size = 1.0f;
-            score = 20;
-        }
-        else if (type == 3)
-        {
-            size = 1.2f;
-            score = 30;
-        }
+        // 배열에서 크기와 점수를 가져온다.
+        size = sizes[index];
+        score = scores[index];
 
         transform.localScale = new Vector3(size, size, 0);
     }
