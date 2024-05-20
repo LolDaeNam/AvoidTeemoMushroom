@@ -7,7 +7,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     [SerializeField] private GameObject mushroom;
-    private float intervalTime = 1f;
+    [SerializeField] GameObject[] items;
+    private float startTime, nowTime;
     private bool isPlaying = false;
     
     public int totalScore = 0;
@@ -19,20 +20,22 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(this);
         }
+        startTime = Time.time;
     }
 
     public void FixedUpdate()
     {
         if (isPlaying)
         {
-            if (intervalTime > 0)
-            {
-                intervalTime -= Time.fixedDeltaTime;
+            nowTime = Time.time - startTime;
+            if (nowTime % 10 == 0)
+            { 
+                int randomItemIndex = Random.Range(0, items.Length);
+                Instantiate(items[randomItemIndex]);
             }
-            else
+            if (nowTime % 1 == 0)
             {
-                MakeMushroom();
-                intervalTime = 1;
+                Instantiate(mushroom);
             }
         }
     }

@@ -18,6 +18,12 @@ public class ItemManager : MonoBehaviour
     public void UseItem(GameObject player)
     {
         ItemEvent?.Invoke(player);
+        DestroyedItem();
+    }
+    
+    // 땅에 접촉해 파괴되었을 경우 이벤트 비워주기
+    public void DestroyedItem()
+    {
         ItemEvent = null;
     }
 
