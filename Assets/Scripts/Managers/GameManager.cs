@@ -8,10 +8,12 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject mushroom;
     [SerializeField] GameObject[] items;
+    
     private float startTime, nowTime;
     private bool isPlaying = false;
-    
     public int totalScore = 0;
+    private int bestScore = 0; //최고점
+
 
     public void Awake()
     {
@@ -21,6 +23,17 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(this);
         }
         startTime = Time.time;
+    }
+
+    public void Start()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
+        bestScore = PlayerPrefs.GetInt("BestScore", 0);
+        
     }
 
     public void FixedUpdate()
@@ -63,4 +76,13 @@ public class GameManager : MonoBehaviour
         Instantiate(mushroom);
     }
 
+    public void UpdateBestScore(int newScore)
+    {
+        if(newScore > bestScore)
+        {
+            bestScore = newScore;
+            PlayerPrefs.SetInt("BestScore", bestScore);
+           
+        }
+    }
 }

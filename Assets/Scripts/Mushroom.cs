@@ -70,6 +70,7 @@ public class Mushroom : MonoBehaviour
         {
             Destroy(this.gameObject);
             GameManager.Instance.totalScore += score;
+           
         }
         else if (collision.gameObject.CompareTag("Player"))
         {
