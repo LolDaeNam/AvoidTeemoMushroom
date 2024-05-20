@@ -43,6 +43,15 @@ public class PlayerHealthSystem : MonoBehaviour
         }
     }
 
+    public void RecoverHp(int recoverAmount)
+    {
+        int hp = currentHp;
+        hp += recoverAmount;
+        hp = Mathf.Clamp(hp, 1, 100);
+        currentHp = hp;
+        UpdateHpUI();
+    }
+
     void UpdateHpUI()
     {
         if (hpSlider != null) hpSlider.value = currentHp;
