@@ -11,8 +11,8 @@ public class Mushroom : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        float x = Random.Range(-2.95f, 2.8f);
-        float y = (6);
+        float x = Random.Range(-4.95f, 4.95f);
+        float y = (5.5f);
 
         transform.position = new Vector3(x, y, 0);
 
