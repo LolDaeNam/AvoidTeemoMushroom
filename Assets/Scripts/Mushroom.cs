@@ -5,12 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Mushroom : MonoBehaviour
 {
-    private PlayerHealthSystem healthSystem;
-
     float size = 1.0f;
 
     public int score;
     public int damage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,7 +59,12 @@ public class Mushroom : MonoBehaviour
         {
             Destroy(this.gameObject);
 
-            healthSystem.TakeDamage(damage);
+            PlayerHealthSystem healthSystem = collision.gameObject.GetComponentInChildren<PlayerHealthSystem>();
+
+            if (healthSystem != null)
+            {
+                healthSystem.TakeDamage(damage);
+            }
 
             if (healthSystem.isDead == true) GameManager.Instance.GameOver();
         }
