@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Mushroom : MonoBehaviour
 {
     float size = 1.0f;
-    int score = 0;
+    public int score = 0;
     int damage = 0;
     Color color = Color.white;
 
@@ -78,7 +78,12 @@ public class Mushroom : MonoBehaviour
 
             PlayerHealthSystem healthSystem = collision.gameObject.GetComponentInChildren<PlayerHealthSystem>();
 
-            if (healthSystem != null)
+            if(GameManager.Instance.isActiveSckill == true)
+            {
+                score *= 2;
+                GameManager.Instance.totalScore += score;
+            }
+            else if (healthSystem != null)
             {
                 healthSystem.TakeDamage(damage);
             }

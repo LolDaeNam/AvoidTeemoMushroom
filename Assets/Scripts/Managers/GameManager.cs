@@ -7,10 +7,14 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     [SerializeField] private GameObject mushroom;
+    
+    public bool isActiveSckill = false;
+
     [SerializeField] GameObject[] items;
     
     private float startTime, nowTime;
     private bool isPlaying = false;
+    
     public int totalScore = 0;
     private int bestScore = 0; //최고점
 

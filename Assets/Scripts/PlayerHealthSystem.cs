@@ -8,11 +8,12 @@ public class PlayerHealthSystem : MonoBehaviour
     PlayerAnimationContorller playerAnimation;
 
     public int maxHp = 100;
-    public int currentHp;
+    private float currentHp;
+    public float damageReduction = 1.0f;
 
     public Slider hpSlider;
     public Text hpText;
-
+    
     public bool isDead = false;
 
     private void Start()
@@ -26,9 +27,9 @@ public class PlayerHealthSystem : MonoBehaviour
         hpText.text = currentHp.ToString() + " / " + maxHp.ToString();
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
-        currentHp -= damage;
+        currentHp -= damage * damageReduction;
 
         if (currentHp < 0) currentHp = 0;
 
