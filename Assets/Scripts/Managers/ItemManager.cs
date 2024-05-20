@@ -14,11 +14,20 @@ public class ItemManager : MonoBehaviour
             Instance = this;
     }
 
+    // 이벤트에 등록된 아이템 효과 사용
     public void UseItem(GameObject player)
     {
         ItemEvent?.Invoke(player);
+        DestroyedItem();
+    }
+    
+    // 땅에 접촉해 파괴되었을 경우 이벤트 비워주기
+    public void DestroyedItem()
+    {
+        ItemEvent = null;
     }
 
+    // 무적 아이템 후처리
     public void InvincibleItemAfterEffect(GameObject player)
     {
         StartCoroutine("ResetInvincibility", player);
@@ -26,6 +35,7 @@ public class ItemManager : MonoBehaviour
 
     public IEnumerator ResetInvincibility(GameObject player)
     {
+        // 무적 상태 5초 유지 후 원상복귀
         yield return new WaitForSeconds(5f);
         player.tag = "Player";
         player.GetComponentInChildren<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
