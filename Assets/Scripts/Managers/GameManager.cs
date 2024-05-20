@@ -9,7 +9,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject mushroom;
     private float intervalTime = 1f;
     private bool isPlaying = false;
-    
+
+    public bool isActiveSckill = false;
+
     public int totalScore = 0;
 
     public void Awake()

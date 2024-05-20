@@ -67,4 +67,9 @@ public class PlayerSkillContorller : MonoBehaviour
     {
         UseSkill(1);
     }
+
+    public void OnEskill()
+    {
+        UseSkill(2);
+    }
 }
