@@ -8,7 +8,7 @@ public class PlayerHealthSystem : MonoBehaviour
     PlayerAnimationContorller playerAnimation;
 
     public int maxHp = 100;
-    private float currentHp;
+    public float currentHp;
     public float damageReduction = 1.0f;
 
     public Slider hpSlider;
@@ -45,7 +45,7 @@ public class PlayerHealthSystem : MonoBehaviour
 
     public void RecoverHp(int recoverAmount)
     {
-        int hp = currentHp;
+        float hp = currentHp;
         hp += recoverAmount;
         hp = Mathf.Clamp(hp, 1, 100);
         currentHp = hp;
