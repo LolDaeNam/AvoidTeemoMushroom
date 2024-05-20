@@ -16,7 +16,10 @@ public class Mushroom : MonoBehaviour
     float[] Speeds = { 3.0f, 8.0f, 3.0f, 3.0f, 5.0f };
     // 5번 버섯 y 위치 0으로 설정
     float[] yPosition = { 5.5f, 5.5f, 5.5f, 5.5f, 0f };
+    
+    public int damage;
 
+    // Start is called before the first frame update
     void Start()
     {
         float x = Random.Range(-4.95f, 4.95f);
@@ -68,8 +71,15 @@ public class Mushroom : MonoBehaviour
         else if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(this.gameObject);
-            GameManager.Instance.GameOver();
-            SceneManager.LoadScene(2);
+
+            PlayerHealthSystem healthSystem = collision.gameObject.GetComponentInChildren<PlayerHealthSystem>();
+
+            if (healthSystem != null)
+            {
+                healthSystem.TakeDamage(damage);
+            }
+
+            if (healthSystem.isDead == true) GameManager.Instance.GameOver();
         }
     }
 }
