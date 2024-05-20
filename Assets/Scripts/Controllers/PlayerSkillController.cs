@@ -4,10 +4,14 @@ public class PlayerSkillContorller : MonoBehaviour
 {
     public AbstractSkill[] skills;
 
+    [HideInInspector]
     public bool[] skillOnCooldown;
+    [HideInInspector]
     public float[] skillCooldownTimers;
-    private bool[] skillActive;
-    private float[] skillActiveTimers;
+    [HideInInspector]
+    public bool[] skillActive;
+    [HideInInspector]
+    public float[] skillActiveTimers;
 
     private void Start()
     {
@@ -35,7 +39,7 @@ public class PlayerSkillContorller : MonoBehaviour
                 skillActiveTimers[i] -= Time.deltaTime;
                 if (skillActiveTimers[i] <= 0)
                 {
-                    skills[i].Deactivate();
+                    skills[i].Deactivate(gameObject);
                     skillActive[i] = false;
                     skillOnCooldown[i] = true;
                     skillCooldownTimers[i] = skills[i].cooldownTime;
@@ -48,9 +52,19 @@ public class PlayerSkillContorller : MonoBehaviour
     {
         if (!skillActive[skillIndex] && !skillActive[skillIndex])
         {
-            skills[skillIndex].Activate();
+            skills[skillIndex].Activate(gameObject);
             skillActive[skillIndex] = true;
             skillActiveTimers[skillIndex] = skills[skillIndex].activeTime;
         }
+    }
+
+    public void OnQskill()
+    {
+        UseSkill(0);
+    }
+
+    public void OnWskill()
+    {
+        UseSkill(1);
     }
 }

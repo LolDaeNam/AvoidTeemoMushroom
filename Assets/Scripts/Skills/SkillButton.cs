@@ -6,9 +6,21 @@ public class SkillButton : MonoBehaviour
     public int skillIndex;
     public PlayerSkillContorller skillContorller;
     public Image cooldownOverlay;
+    public Image activeOverlay;
+
+
 
     private void Update()
     {
+        if (skillContorller.skillActive[skillIndex])
+        {
+            activeOverlay.fillAmount = skillContorller.skillActiveTimers[skillIndex] / skillContorller.skills[skillIndex].activeTime;
+        }
+        else
+        {
+            activeOverlay.fillAmount = 0;
+        }
+
         if (skillContorller.skillOnCooldown[skillIndex])
         {
             cooldownOverlay.fillAmount = skillContorller.skillCooldownTimers[skillIndex] / skillContorller.skills[skillIndex].cooldownTime;
@@ -17,10 +29,5 @@ public class SkillButton : MonoBehaviour
         {
             cooldownOverlay.fillAmount = 0;
         }
-    }
-
-    public void OnButtonClick()
-    {
-        skillContorller.UseSkill(skillIndex);
     }
 }

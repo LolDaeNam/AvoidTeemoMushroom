@@ -1,27 +1,24 @@
+using UnityEngine;
+
 public class Qskill : AbstractSkill
 {
     PlayerMovement playerMovement;
 
     public float speedMultiplier = 2f;
 
-    private void Awake()
+    public override void Activate(GameObject player)
     {
-        playerMovement = GetComponent<PlayerMovement>();
-        cooldownTime = 8f;
-        activeTime = 5f;
-    }
-
-    public override void Activate()
-    {
+        playerMovement = player.GetComponent<PlayerMovement>();
         if (playerMovement != null)
         {
             playerMovement.speed *= speedMultiplier;
         }
     }
 
-    public override void Deactivate()
+    public override void Deactivate(GameObject player)
     {
-        if(playerMovement != null)
+        playerMovement = player.GetComponent<PlayerMovement>();
+        if (playerMovement != null)
         {
             playerMovement.speed /= speedMultiplier;
         }
