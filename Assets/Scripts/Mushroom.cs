@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Mushroom : MonoBehaviour
 {
+    public Animator anim;
+    private Rigidbody2D rb2D;
+
     float size = 1.0f;
     public int score = 0;
     int damage = 0;
@@ -20,6 +23,12 @@ public class Mushroom : MonoBehaviour
     float[] yPosition = { 5.5f, 5.5f, 5.5f, 5.5f, 0f };
 
     int[] damages = { 15, 20, 30, 30, 30};
+
+    private void Awake()
+    {
+        rb2D = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -59,22 +68,17 @@ public class Mushroom : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Ground"))
         {
-            Destroy(this.gameObject);
+            SetBoom();
+
             GameManager.Instance.totalScore += score;
-           
         }
         else if (collision.gameObject.CompareTag("Player"))
         {
-            Destroy(this.gameObject);
+            SetBoom();
 
             PlayerHealthSystem healthSystem = collision.gameObject.GetComponentInChildren<PlayerHealthSystem>();
 
@@ -90,5 +94,17 @@ public class Mushroom : MonoBehaviour
 
             if (healthSystem.isDead == true) GameManager.Instance.GameOver();
         }
+    }
+
+    public void DestroyMushroom()
+    {
+        Destroy(gameObject);
+    }
+
+    private void SetBoom()
+    {
+        rb2D.gravityScale = 0;
+        rb2D.velocity = Vector2.zero;
+        anim.SetBool("isBoom", true);
     }
 }
