@@ -152,10 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb29c8bd1893f94faed79a49bb797eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownTime: 9
-  activeTime: 4
+  cooldownTime: 20
+  activeTime: 6
   healthSystem: {fileID: 5792679085400124720}
-  mushroom: {fileID: 0}
 --- !u!1 &637797028485397407
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,7 +393,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f18ea48da1454bf4b9246581c387cdbc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3d44b20d38a41654f9d07a49872b4c33, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1042,7 +1041,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 1e5dfb17b7bfe034d984ac1051a8dd53, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.54901963}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1568,7 +1567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005ea4b95a56f1f4bb1909a5164bf3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownTime: 15
+  cooldownTime: 12
   activeTime: 4
   healthSystem: {fileID: 5792679085400124720}
   shield: {fileID: 6278564466776630535}
@@ -1756,6 +1755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHp: 100
+  currentHp: 0
   damageReduction: 1
   hpSlider: {fileID: 7920647824213931216}
   hpText: {fileID: 7069103108056730201}
