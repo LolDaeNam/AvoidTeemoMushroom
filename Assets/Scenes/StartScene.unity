@@ -1006,6 +1006,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mushroom: {fileID: 1421598194205631842, guid: e32496de469d04641b9f504e6f236b7c, type: 3}
+  isActiveEskill: 0
+  isActiveRskill: 0
   items:
   - {fileID: 4180292372623237593, guid: 2c48c9aa443ff6a4e88d4aa30e62368a, type: 3}
   - {fileID: 4180292372623237593, guid: 78f81ffd2f9e96a42bac7c018d803f4b, type: 3}

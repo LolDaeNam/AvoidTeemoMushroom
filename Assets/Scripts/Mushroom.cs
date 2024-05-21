@@ -71,8 +71,17 @@ public class Mushroom : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.CompareTag("Ground"))
+    { 
+        if (collision.gameObject.CompareTag("Weapon"))
+        {
+            if (GameManager.Instance.isActiveRskill == true)
+            {
+                score *= 3;
+                GameManager.Instance.totalScore += score;
+                Destroy(this.gameObject, 0.5f);
+            }
+        }
+        else if(collision.gameObject.CompareTag("Ground"))
         {
             Destroy(this.gameObject);
             GameManager.Instance.totalScore += score;
@@ -84,7 +93,7 @@ public class Mushroom : MonoBehaviour
 
             PlayerHealthSystem healthSystem = collision.gameObject.GetComponentInChildren<PlayerHealthSystem>();
 
-            if(GameManager.Instance.isActiveSkill == true)
+            if (GameManager.Instance.isActiveEskill == true)
             {
                 score *= 2;
                 GameManager.Instance.totalScore += score;
