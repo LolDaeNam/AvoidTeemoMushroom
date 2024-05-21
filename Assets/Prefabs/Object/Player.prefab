@@ -155,6 +155,7 @@ MonoBehaviour:
   cooldownTime: 20
   activeTime: 6
   healthSystem: {fileID: 5792679085400124720}
+  spriteChangeController: {fileID: 6462659377307945180}
 --- !u!1 &637797028485397407
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4260904780639651388}
   - component: {fileID: 6207971045672118729}
+  - component: {fileID: 6462659377307945180}
   m_Layer: 0
   m_Name: MainSprite
   m_TagString: Untagged
@@ -404,6 +406,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6462659377307945180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912452961979792646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2a67b6e5d584c40b513e713152015f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 3d44b20d38a41654f9d07a49872b4c33, type: 3}
+  - {fileID: 21300000, guid: f169db48bf55473489d8b78cef32caaa, type: 3}
+  spriteRenderer: {fileID: 6207971045672118729}
 --- !u!1 &2001038956678896042
 GameObject:
   m_ObjectHideFlags: 0

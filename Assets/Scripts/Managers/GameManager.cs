@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject mushroom;
     
-    public bool isActiveSckill = false;
+    public bool isActiveSkill = false;
 
     [SerializeField] GameObject[] items;
     

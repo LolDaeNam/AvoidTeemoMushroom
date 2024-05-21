@@ -4,6 +4,7 @@ using UnityEngine;
 public class Eskill : AbstractSkill
 {
     public PlayerHealthSystem healthSystem;
+    public SprtieChangeController spriteChangeController;
 
     public override void Activate(GameObject player)
     {
@@ -12,7 +13,9 @@ public class Eskill : AbstractSkill
         {
             healthSystem.damageReduction = 0f;
         }
-        GameManager.Instance.isActiveSckill = true;
+        spriteChangeController.SpriteChange(1);
+        GameManager.Instance.isActiveSkill = true;
+        
     }
 
     public override void Deactivate(GameObject player)
@@ -22,6 +25,7 @@ public class Eskill : AbstractSkill
         {
             healthSystem.damageReduction = 1f;
         }
-        GameManager.Instance.isActiveSckill = false;
+        spriteChangeController.SpriteChange(0);
+        GameManager.Instance.isActiveSkill = false;
     }
 }

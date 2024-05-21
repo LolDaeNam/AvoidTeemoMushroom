@@ -78,7 +78,7 @@ public class Mushroom : MonoBehaviour
 
             PlayerHealthSystem healthSystem = collision.gameObject.GetComponentInChildren<PlayerHealthSystem>();
 
-            if(GameManager.Instance.isActiveSckill == true)
+            if(GameManager.Instance.isActiveSkill == true)
             {
                 score *= 2;
                 GameManager.Instance.totalScore += score;
