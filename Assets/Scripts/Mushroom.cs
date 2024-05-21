@@ -90,5 +90,9 @@ public class Mushroom : MonoBehaviour
 
             if (healthSystem.isDead == true) GameManager.Instance.GameOver();
         }
+        else if (collision.gameObject.CompareTag("Invincible"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
