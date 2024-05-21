@@ -17,7 +17,7 @@ public class Mushroom : MonoBehaviour
     Color[] colors = { Color.white, Color.white, Color.white, Color.red, Color.blue };
     float[] Speeds = { 3.0f, 8.0f, 0.5f, 4.0f, 5.0f };
     // 5번 버섯 y 위치 0으로 설정
-    float[] yPosition = { 5.5f, 5.5f, 5.5f, 5.5f, 0f };
+    float[] yPosition = { 5.5f, 5.5f, 5.5f, 5.5f, 3f };
 
     int[] damages = { 15, 20, 30, 30, 30};
 
@@ -26,7 +26,6 @@ public class Mushroom : MonoBehaviour
     {
         float x = Random.Range(-4.7f, 4.7f);
 
-        transform.position = new Vector3(x, 5.5f, 0);
 
         int type = Random.Range(1, 6);
         // 배열 인덱스는 0부터 시작하므로 type 값에서 1을 뺀다.
@@ -40,6 +39,7 @@ public class Mushroom : MonoBehaviour
         float Speed = Speeds[index];
         // 5번 버섯은 y 위치를 배열에서 가져온다.
         float y = yPosition[index];
+        transform.position = new Vector3(x, y, 0);
 
         transform.localScale = new Vector3(size, size, 0);
 
