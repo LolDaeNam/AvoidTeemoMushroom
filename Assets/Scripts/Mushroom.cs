@@ -15,10 +15,10 @@ public class Mushroom : MonoBehaviour
     Color color = Color.white;
 
     // 크기, 점수, 색상, 떨어지는 속도를 배열로 저장
-    float[] sizes = { 2.0f, 1.0f, 4.5f, 3.0f, 3.0f };
-    int[] scores = { 10, 20, 30, 40, 50 };
+    float[] sizes = { 1f, 0.75f, 1.5f, 1.5f, 1.5f };
+    int[] scores = { 1, 2, 3, 4, 5 };
     Color[] colors = { Color.white, Color.white, Color.white, Color.red, Color.blue };
-    float[] Speeds = { 3.0f, 8.0f, 0.5f, 3.0f, 5.0f };
+    float[] Speeds = { 3.0f, 8.0f, 0.5f, 4.0f, 5.0f };
     // 5번 버섯 y 위치 0으로 설정
     float[] yPosition = { 5.5f, 5.5f, 5.5f, 5.5f, 0f };
 
@@ -93,6 +93,10 @@ public class Mushroom : MonoBehaviour
             }
 
             if (healthSystem.isDead == true) GameManager.Instance.GameOver();
+        }
+        else if (collision.gameObject.CompareTag("Invincible"))
+        {
+            Destroy(gameObject);
         }
     }
 

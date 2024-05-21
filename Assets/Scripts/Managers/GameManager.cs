@@ -50,9 +50,13 @@ public class GameManager : MonoBehaviour
                 int randomItemIndex = Random.Range(0, items.Length);
                 Instantiate(items[randomItemIndex]);
             }
-            if (nowTime % 1 == 0)
+            if (nowTime % 0.25 == 0)
             {
-                Instantiate(mushroom);
+                int num = Random.Range(1, 4);
+                for (int i = 0; i < num; i++)
+                {
+                    Instantiate(mushroom);
+                }
             }
         }
     }

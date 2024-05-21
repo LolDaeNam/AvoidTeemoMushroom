@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InvincibleItem : Item
 {
@@ -14,6 +15,8 @@ public class InvincibleItem : Item
         player.tag = "Invincible";
         // 시각적 효과(노란색)
         player.GetComponent<Animator>().Play("Invincible");
+        // 이동 불가
+        player.GetComponent<PlayerInput>().enabled = false;
         // 이후 처리를 아이템 매니저에서 함
         ItemManager.Instance.InvincibleItemAfterEffect(player);
     }

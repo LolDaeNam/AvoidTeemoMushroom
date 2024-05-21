@@ -50,7 +50,7 @@ public class PlayerSkillContorller : MonoBehaviour
 
     public void UseSkill(int skillIndex)
     {
-        if (!skillActive[skillIndex] && !skillActive[skillIndex])
+        if (!skillOnCooldown[skillIndex] && !skillActive[skillIndex])
         {
             skills[skillIndex].Activate(gameObject);
             skillActive[skillIndex] = true;
