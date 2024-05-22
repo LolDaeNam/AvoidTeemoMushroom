@@ -20,7 +20,7 @@ public class Eskill : AbstractSkill
         GameManager.Instance.isActiveEskill = true;
         Sword.SetActive(true);
         playerAnimation.OnEskill();
-        
+        AudioManager.Instance.GarenSkillSound(2);
     }
 
     public override void Deactivate(GameObject player)

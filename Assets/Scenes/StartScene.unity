@@ -1556,6 +1556,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1023183149}
   audioClip: {fileID: 8300000, guid: 5c34b479ba9fd4943a2682b4ba3b5195, type: 3}
+  player: {fileID: -2240909415269583407, guid: 4ee8d8777e207824595d5aabac92dc06, type: 3}
+  garenSkill:
+  - {fileID: 8300000, guid: 85188fc09966430469d7453698cbe232, type: 3}
+  - {fileID: 8300000, guid: d816feb75abc50240aa344d5c699263d, type: 3}
+  - {fileID: 8300000, guid: 6d3be1b9b8e95594897fd80b5fd16ba8, type: 3}
+  - {fileID: 8300000, guid: 4074234fcb53a6b40aa7171f86d0439f, type: 3}
 --- !u!82 &1023183149
 AudioSource:
   m_ObjectHideFlags: 0

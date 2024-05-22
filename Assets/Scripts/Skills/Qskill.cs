@@ -13,6 +13,7 @@ public class Qskill : AbstractSkill
         {
             playerMovement.speed *= speedMultiplier;
         }
+        AudioManager.Instance.GarenSkillSound(0);
     }
 
     public override void Deactivate(GameObject player)
