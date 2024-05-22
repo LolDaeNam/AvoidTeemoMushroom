@@ -72,4 +72,9 @@ public class PlayerSkillContorller : MonoBehaviour
     {
         UseSkill(2);
     }
+
+    public void OnRskill()
+    {
+        UseSkill(3);
+    }
 }

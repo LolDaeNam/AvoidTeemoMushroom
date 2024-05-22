@@ -9,6 +9,7 @@ public class PlayerAnimationContorller : MonoBehaviour
 
     private static readonly int isHit = Animator.StringToHash("isHit");
     private static readonly int isSkill = Animator.StringToHash("isSkill");
+    private static readonly int isRskill = Animator.StringToHash("isRskill");
 
     private void Awake()
     {
@@ -25,13 +26,23 @@ public class PlayerAnimationContorller : MonoBehaviour
         animator.SetBool(isHit, false);
     }
 
-    public void OnSkillHit()
+    public void OnEskill()
     {
         animator.SetBool(isSkill, true);
     }
 
-    public void OutSkillHit()
+    public void OutEskill()
     {
         animator.SetBool(isSkill, false);
+    }
+
+    public void OnRskill()
+    {
+        animator.SetBool(isRskill, true);
+    }
+
+    public void OutRskill()
+    {
+        animator.SetBool(isRskill, false);
     }
 }
