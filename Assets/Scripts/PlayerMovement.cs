@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private TopDownPlayerController controller;
+    [HideInInspector]
+    public TopDownPlayerController controller;
     private Rigidbody2D rb;
     [SerializeField] private SpriteRenderer characterRenderer;
 
@@ -23,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
         controller.OnMoveEvent += Move;
     }
 
-    void Move(Vector2 direction)
+    public void Move(Vector2 direction)
     {
         movementDirection = direction;
         if (direction.x > 0) characterRenderer.flipX = false;
