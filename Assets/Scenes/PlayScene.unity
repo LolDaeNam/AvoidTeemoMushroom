@@ -1668,26 +1668,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1887363401}
     m_Modifications:
-    - target: {fileID: 528962995896597182, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 528962995896597182, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 528962995896597182, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 667663534092609285, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 5367854252750332786, guid: 58e6f486bc946b84b9b8faad6e90a6fe, type: 3}
-    - target: {fileID: 667663534092609285, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetMusicVolume
-      objectReference: {fileID: 0}
     - target: {fileID: 1270482003126379884, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1768,93 +1748,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1305021900834702558, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1305021900834702558, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1305021900834702558, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2346130489360837597, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2346130489360837597, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2411860090023878077, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2411860090023878077, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2411860090023878077, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3141026715983700689, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3141026715983700689, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3141026715983700689, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 5367854252750332786, guid: 58e6f486bc946b84b9b8faad6e90a6fe, type: 3}
-    - target: {fileID: 3141026715983700689, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetMasterVolume
-      objectReference: {fileID: 0}
-    - target: {fileID: 3141026715983700689, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AudioManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3141026715983700689, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4150436988636526974, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4150436988636526974, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4540116138530681137, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4540116138530681137, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4729332163870483175, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 5367854252750332786, guid: 58e6f486bc946b84b9b8faad6e90a6fe, type: 3}
-    - target: {fileID: 4729332163870483175, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetSFXVolume
-      objectReference: {fileID: 0}
     - target: {fileID: 7395947448318611583, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
       propertyPath: m_Name
       value: SettingPanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 7395947448318611583, guid: d52b4f16f165ebe4a88d2100175dac0b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
