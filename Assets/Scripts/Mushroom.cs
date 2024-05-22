@@ -10,15 +10,15 @@ public class Mushroom : MonoBehaviour
     private Rigidbody2D rb2D;
 
     float size = 1.0f;
-    public int score = 0;
+    int score;
     int damage = 0;
     Color color = Color.white;
 
     // 크기, 점수, 색상, 떨어지는 속도를 배열로 저장
-    float[] sizes = { 1f, 0.75f, 1.5f, 1.5f, 1.5f };
+    float[] sizes = { 1f, 0.75f, 1.5f, 3f, 1.5f };
     int[] scores = { 1, 2, 3, 4, 5 };
     Color[] colors = { Color.white, Color.white, Color.white, Color.red, Color.blue };
-    float[] Speeds = { 3.0f, 8.0f, 0.5f, 4.0f, 5.0f };
+    float[] Speeds = { 3f, 8f, 4f, 0.5f, 5f };
     // 5번 버섯 y 위치 0으로 설정
     float[] yPosition = { 5.5f, 5.5f, 5.5f, 5.5f, 3f };
 
@@ -35,10 +35,16 @@ public class Mushroom : MonoBehaviour
     {
         float x = Random.Range(-4.7f, 4.7f);
 
-
-        int type = Random.Range(1, 6);
-        // 배열 인덱스는 0부터 시작하므로 type 값에서 1을 뺀다.
-        int index = type - 1;
+        int index = 0;
+        int target = 0;
+        for (int i = 1; i <= 5; i++)
+        {
+            if (GameManager.Instance.totalScore > target)
+            {
+                index = Random.Range(0, i);
+                target += 50;
+            }
+        }
 
         // 배열에서 크기, 점수, 색상을 가져온다.
         size = sizes[index];
@@ -69,8 +75,17 @@ public class Mushroom : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.CompareTag("Ground"))
+    { 
+        if (collision.gameObject.CompareTag("Weapon"))
+        {
+            if (GameManager.Instance.isActiveRskill == true)
+            {
+                score *= 3;
+                GameManager.Instance.totalScore += score;
+                Destroy(this.gameObject, 1f);
+            }
+        }
+        else if(collision.gameObject.CompareTag("Ground"))
         {
             SetBoom();
 
@@ -82,7 +97,7 @@ public class Mushroom : MonoBehaviour
 
             PlayerHealthSystem healthSystem = collision.gameObject.GetComponentInChildren<PlayerHealthSystem>();
 
-            if(GameManager.Instance.isActiveSkill == true)
+            if (GameManager.Instance.isActiveEskill == true)
             {
                 score *= 2;
                 GameManager.Instance.totalScore += score;

@@ -22,9 +22,9 @@ public class Eskill : AbstractSkill
             healthSystem.damageReduction = 0f;
         }
         spriteChangeController.SpriteChange(1);
-        GameManager.Instance.isActiveSkill = true;
+        GameManager.Instance.isActiveEskill = true;
         Sword.SetActive(true);
-        playerAnimation.OnSkillHit();
+        playerAnimation.OnEskill();
         
     }
 
@@ -37,8 +37,8 @@ public class Eskill : AbstractSkill
             healthSystem.damageReduction = 1f;
         }
         spriteChangeController.SpriteChange(0);
-        GameManager.Instance.isActiveSkill = false;
+        GameManager.Instance.isActiveEskill = false;
         Sword.SetActive(false);
-        playerAnimation.OutSkillHit();
+        playerAnimation.OutEskill();
     }
 }
