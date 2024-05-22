@@ -388,6 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde3211d4110dda4691fb4ec2be7eca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StopPanel: {fileID: 1887363400}
 --- !u!114 &158625492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,19 +435,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 158625491}
         m_TargetAssemblyTypeName: ButtonAction, Assembly-CSharp
-        m_MethodName: OpenPanel
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1887363400}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 158625491}
-        m_TargetAssemblyTypeName: ButtonAction, Assembly-CSharp
-        m_MethodName: GamePause
+        m_MethodName: GamePauseOrPlay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1071,6 +1060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde3211d4110dda4691fb4ec2be7eca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StopPanel: {fileID: 0}
 --- !u!114 &380819144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2426,6 +2416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde3211d4110dda4691fb4ec2be7eca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StopPanel: {fileID: 0}
 --- !u!114 &1981824940
 MonoBehaviour:
   m_ObjectHideFlags: 0
