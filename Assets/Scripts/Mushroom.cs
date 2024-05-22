@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Mushroom : MonoBehaviour
 {
     float size = 1.0f;
-    public int score = 0;
+    int score;
     int damage = 0;
     Color color = Color.white;
 
@@ -78,7 +78,7 @@ public class Mushroom : MonoBehaviour
             {
                 score *= 3;
                 GameManager.Instance.totalScore += score;
-                Destroy(this.gameObject, 0.5f);
+                Destroy(this.gameObject, 1f);
             }
         }
         else if(collision.gameObject.CompareTag("Ground"))

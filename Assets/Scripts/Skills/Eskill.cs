@@ -24,7 +24,7 @@ public class Eskill : AbstractSkill
         spriteChangeController.SpriteChange(1);
         GameManager.Instance.isActiveEskill = true;
         Sword.SetActive(true);
-        playerAnimation.OnSkillHit();
+        playerAnimation.OnEskill();
         
     }
 
@@ -39,6 +39,6 @@ public class Eskill : AbstractSkill
         spriteChangeController.SpriteChange(0);
         GameManager.Instance.isActiveEskill = false;
         Sword.SetActive(false);
-        playerAnimation.OutSkillHit();
+        playerAnimation.OutEskill();
     }
 }

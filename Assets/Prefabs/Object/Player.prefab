@@ -474,10 +474,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownTime: 60
-  activeTime: 4
+  activeTime: 5
   currentObject: {fileID: 0}
-  rskillMotion: {fileID: 243840868064044989, guid: 18c901dcc7f7d7843b85153ac7b5b825, type: 3}
-  rigidbody: {fileID: 8616331867192771620, guid: 18c901dcc7f7d7843b85153ac7b5b825, type: 3}
+  rskillMotion: {fileID: 3473291534277414084, guid: 18c901dcc7f7d7843b85153ac7b5b825, type: 3}
 --- !u!1 &1912452961979792646
 GameObject:
   m_ObjectHideFlags: 0
@@ -2134,10 +2133,10 @@ BoxCollider2D:
   m_Offset: {x: 0.037722737, y: -0.02577871}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 1, y: 0}
+    oldSize: {x: 0.9425, y: 1.2475}
+    newSize: {x: 0.9425, y: 1.2475}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
