@@ -7,11 +7,17 @@ public class Rskill : AbstractSkill
     public GameObject rskillMotion;
     PlayerAnimationContorller playerAnimation;
     PlayerMovement playerMovement;
+    PlayerHealthSystem healthSystem;
 
     public override void Activate(GameObject player)
     {
         playerAnimation = player.GetComponent<PlayerAnimationContorller>();
         playerMovement = player.GetComponent<PlayerMovement>();
+        healthSystem = player.GetComponent<PlayerHealthSystem>();
+        if (healthSystem != null)
+        {
+            healthSystem.damageReduction = 0f;
+        }
         GameManager.Instance.isActiveRskill = true;
         currentObject = Instantiate(rskillMotion, new Vector3(0, 15, 0), Quaternion.identity);
         playerAnimation.OnRskill();
@@ -22,6 +28,11 @@ public class Rskill : AbstractSkill
     {
         playerAnimation = player.GetComponent<PlayerAnimationContorller>();
         playerMovement = player.GetComponent<PlayerMovement>();
+        healthSystem = player.GetComponent<PlayerHealthSystem>();
+        if (healthSystem != null)
+        {
+            healthSystem.damageReduction = 1f;
+        }
         GameManager.Instance.isActiveRskill = false;
         Destroy(currentObject);
         playerAnimation.OutRskill();
