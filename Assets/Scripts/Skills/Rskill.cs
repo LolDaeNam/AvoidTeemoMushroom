@@ -22,6 +22,7 @@ public class Rskill : AbstractSkill
         currentObject = Instantiate(rskillMotion, new Vector3(0, 15, 0), Quaternion.identity);
         playerAnimation.OnRskill();
         playerMovement.controller.OnMoveEvent -= playerMovement.Move;
+        AudioManager.Instance.GarenSkillSound(3);
     }
 
     public override void Deactivate(GameObject player)

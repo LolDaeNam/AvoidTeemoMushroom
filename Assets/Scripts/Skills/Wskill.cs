@@ -13,7 +13,7 @@ public class Wskill : AbstractSkill
             healthSystem.damageReduction = 0.5f;
         }
         shield.SetActive(true);
-
+        AudioManager.Instance.GarenSkillSound(1);
     }
 
     public override void Deactivate(GameObject player)
