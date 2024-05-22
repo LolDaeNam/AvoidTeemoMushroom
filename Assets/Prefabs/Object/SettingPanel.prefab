@@ -239,7 +239,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5367854252750332786, guid: 58e6f486bc946b84b9b8faad6e90a6fe, type: 3}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: SetMasterVolume
         m_Mode: 0
@@ -635,7 +635,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5367854252750332786, guid: 58e6f486bc946b84b9b8faad6e90a6fe, type: 3}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: SetSFXVolume
         m_Mode: 0
@@ -1306,7 +1306,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5367854252750332786, guid: 58e6f486bc946b84b9b8faad6e90a6fe, type: 3}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: SetMusicVolume
         m_Mode: 0
@@ -1630,6 +1630,7 @@ GameObject:
   - component: {fileID: 1270482003126379884}
   - component: {fileID: 8286518707316095444}
   - component: {fileID: 6542618842035550108}
+  - component: {fileID: 5157558925035333108}
   m_Layer: 5
   m_Name: SettingPanel
   m_TagString: Untagged
@@ -1699,6 +1700,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5157558925035333108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7395947448318611583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95003adef9e04384994a190bd62bf27f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7482345365196584805
 GameObject:
   m_ObjectHideFlags: 0
