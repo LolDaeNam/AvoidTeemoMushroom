@@ -8,11 +8,6 @@ public class Eskill : AbstractSkill
     public SprtieChangeController spriteChangeController;
     public GameObject Sword;
 
-    private void Start()
-    {
-        
-    }
-
     public override void Activate(GameObject player)
     {
         healthSystem = player.GetComponent<PlayerHealthSystem>();

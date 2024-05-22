@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 63776512}
   - component: {fileID: 63776511}
   - component: {fileID: 63776513}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1167,7 +1167,7 @@ GameObject:
   - component: {fileID: 892305692}
   - component: {fileID: 892305691}
   m_Layer: 0
-  m_Name: BottomWall
+  m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1409,8 +1409,8 @@ GameObject:
   - component: {fileID: 1676169515}
   - component: {fileID: 1676169514}
   - component: {fileID: 1676169516}
-  m_Layer: 0
-  m_Name: LeftGround
+  m_Layer: 10
+  m_Name: LeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
