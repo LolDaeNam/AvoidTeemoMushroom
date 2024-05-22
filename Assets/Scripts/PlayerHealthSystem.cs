@@ -34,8 +34,8 @@ public class PlayerHealthSystem : MonoBehaviour
         if (currentHp < 0) currentHp = 0;
 
         UpdateHpUI();
-        playerAnimation.OnAnimHit();
-        playerAnimation.Invoke("OutAnimHit", 0.1f);
+        playerAnimation.OnHitAnim();
+        playerAnimation.Invoke("OutHitAnim", 0.1f);
 
         if (currentHp == 0)
         {

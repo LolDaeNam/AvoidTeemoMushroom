@@ -20,7 +20,7 @@ public class Rskill : AbstractSkill
         }
         GameManager.Instance.isActiveRskill = true;
         currentObject = Instantiate(rskillMotion, new Vector3(0, 15, 0), Quaternion.identity);
-        playerAnimation.OnRskill();
+        playerAnimation.OnRskillAnim();
         playerMovement.controller.OnMoveEvent -= playerMovement.Move;
         playerMovement.speed = 0f;
         AudioManager.Instance.GarenSkillSound(3);
@@ -37,7 +37,7 @@ public class Rskill : AbstractSkill
         }
         GameManager.Instance.isActiveRskill = false;
         Destroy(currentObject);
-        playerAnimation.OutRskill();
+        playerAnimation.OutRskillAnim();
         playerMovement.controller.OnMoveEvent += playerMovement.Move;
         playerMovement.speed = 5f;
     }
