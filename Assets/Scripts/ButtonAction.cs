@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class ButtonAction : MonoBehaviour
 {
+    [SerializeField] private GameObject StopPanel;
+
     // 씬 전환 (sceneNum = 빌드 세팅 참고)
     public void ChangeScene(int sceneNum)
     {
@@ -19,15 +21,30 @@ public class ButtonAction : MonoBehaviour
         GameManager.Instance.GameOver();
     }
 
-    public void GamePause()
+    public void GamePauseOrPlay()
     {
-        GameManager.Instance.GamePause();
+        if (StopPanel == null) return;
+        if (!StopPanel.activeSelf)
+        {
+            GameManager.Instance.GamePause();
+            OpenPanel(StopPanel);
+        }
+        else
+        {
+            GameManager.Instance.GamePlay();
+            ClosePanel(StopPanel);
+        }
     }
 
     // 판넬 활성화 (panel = 활성화할 판넬 오브젝트)
     public void OpenPanel(GameObject panel)
     {
         panel.SetActive(true);
+    }
+
+    public void ClosePanel(GameObject panel)
+    {
+        panel.SetActive(false);
     }
 
     // 게임 종료

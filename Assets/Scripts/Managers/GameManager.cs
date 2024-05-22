@@ -80,6 +80,11 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    public void GamePlay()
+    {
+        Time.timeScale = 1f;
+    }
+
     public void MakeMushroom()
     {
         Instantiate(mushroom);
