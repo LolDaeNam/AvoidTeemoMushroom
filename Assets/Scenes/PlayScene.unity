@@ -388,6 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde3211d4110dda4691fb4ec2be7eca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StopPanel: {fileID: 1887363400}
 --- !u!114 &158625492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,19 +435,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 158625491}
         m_TargetAssemblyTypeName: ButtonAction, Assembly-CSharp
-        m_MethodName: OpenPanel
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1887363400}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 158625491}
-        m_TargetAssemblyTypeName: ButtonAction, Assembly-CSharp
-        m_MethodName: GamePause
+        m_MethodName: GamePauseOrPlay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -853,6 +842,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 937448c4f65fd8a4fb2071663bea00f6, type: 3}
+    - target: {fileID: 7920647824213931216, guid: 4ee8d8777e207824595d5aabac92dc06, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8263377513343991872, guid: 4ee8d8777e207824595d5aabac92dc06, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5
@@ -922,7 +915,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 120}
+  m_AnchoredPosition: {x: 0, y: -40}
   m_SizeDelta: {x: 400, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &369355796
@@ -1056,7 +1049,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -40}
+  m_AnchoredPosition: {x: 0, y: 120}
   m_SizeDelta: {x: 400, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &380819143
@@ -1071,6 +1064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde3211d4110dda4691fb4ec2be7eca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StopPanel: {fileID: 0}
 --- !u!114 &380819144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2296,7 +2290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1887363401
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2311,8 +2305,8 @@ RectTransform:
   m_Children:
   - {fileID: 644429633}
   - {fileID: 380819142}
-  - {fileID: 1981824938}
   - {fileID: 369355795}
+  - {fileID: 1981824938}
   - {fileID: 924955196}
   m_Father: {fileID: 484152933}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2426,6 +2420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde3211d4110dda4691fb4ec2be7eca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StopPanel: {fileID: 0}
 --- !u!114 &1981824940
 MonoBehaviour:
   m_ObjectHideFlags: 0
