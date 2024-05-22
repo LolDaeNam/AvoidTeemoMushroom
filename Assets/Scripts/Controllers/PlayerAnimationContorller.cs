@@ -16,32 +16,32 @@ public class PlayerAnimationContorller : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
     }
 
-    public void OnAnimHit()
+    public void OnHitAnim()
     {
         animator.SetBool(isHit, true);
     }
 
-    public void OutAnimHit()
+    public void OutHitAnim()
     {
         animator.SetBool(isHit, false);
     }
 
-    public void OnEskill()
+    public void OnEskillAnim()
     {
         animator.SetBool(isSkill, true);
     }
 
-    public void OutEskill()
+    public void OutEskillAnim()
     {
         animator.SetBool(isSkill, false);
     }
 
-    public void OnRskill()
+    public void OnRskillAnim()
     {
         animator.SetBool(isRskill, true);
     }
 
-    public void OutRskill()
+    public void OutRskillAnim()
     {
         animator.SetBool(isRskill, false);
     }
