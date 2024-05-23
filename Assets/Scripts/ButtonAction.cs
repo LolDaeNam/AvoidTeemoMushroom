@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class ButtonAction : MonoBehaviour
 {
-    [SerializeField] private GameObject StopPanel;
+    [SerializeField] private GameObject StopPanel;  // 일시정지 판넬
 
     // 씬 전환 (sceneNum = 빌드 세팅 참고)
     public void ChangeScene(int sceneNum)
@@ -11,16 +11,19 @@ public class ButtonAction : MonoBehaviour
         SceneManager.LoadScene(sceneNum);
     }
 
+    // 게임 시작 버튼
     public void GameStart()
     {
         GameManager.Instance.GameStart();
     }
 
+    // 게임 종료 버튼
     public void GameOver()
     {
         GameManager.Instance.GameOver();
     }
 
+    // 일시정지 버튼
     public void GamePauseOrPlay()
     {
         if (StopPanel == null) return;

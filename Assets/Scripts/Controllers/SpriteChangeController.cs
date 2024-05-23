@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-public class SprtieChangeController : MonoBehaviour
+public class SpriteChangeController : MonoBehaviour
 {
     public Sprite[] sprites;
 
@@ -12,6 +11,7 @@ public class SprtieChangeController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();  
     }
 
+    // 스프라이트 변경
     public void SpriteChange(int index)
     {
         spriteRenderer.sprite = sprites[index];

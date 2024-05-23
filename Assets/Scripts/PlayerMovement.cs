@@ -24,6 +24,12 @@ public class PlayerMovement : MonoBehaviour
         controller.OnMoveEvent += Move;
     }
 
+    private void FixedUpdate()
+    {
+        ApplyMovement(movementDirection);
+    }
+
+    // 방향 설정
     public void Move(Vector2 direction)
     {
         movementDirection = direction;
@@ -32,11 +38,7 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    private void FixedUpdate()
-    {
-        ApplyMovement(movementDirection);
-    }
-
+    // 실직적인 움직임 적용
     void ApplyMovement(Vector2 direction)
     {
         direction *= speed;
